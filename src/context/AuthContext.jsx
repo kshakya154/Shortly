@@ -10,9 +10,12 @@ export const AuthProvider = ({ children }) => {
   useEffect(() => {
     const checkAuth = async () => {
       try {
-        const res = await fetch("http://localhost:8000/me", {
-          credentials: "include", // send cookies
-        });
+        const res = await fetch(
+          "https://shortly-backend-amcp.onrender.com/me",
+          {
+            credentials: "include", // send cookies
+          }
+        );
 
         if (res.ok) {
           const data = await res.json();
