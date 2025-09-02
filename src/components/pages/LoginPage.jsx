@@ -55,6 +55,11 @@ function LoginPage() {
         overflow: "hidden",
       }}
     >
+      {/* <h1 className="text-2xl font-extrabold relative z-10 mb-11">
+        <span className="relative px-6 py-2 rounded-2xl bg-white/10 backdrop-blur-md ">
+          Shortly
+        </span>
+      </h1> */}
       {/* Orb Background */}
       <Orb
         hoverIntensity={0.5}

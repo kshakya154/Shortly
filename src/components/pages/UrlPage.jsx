@@ -29,7 +29,7 @@ function UrlPage() {
       console.log("Server Response:", result);
 
       // Assuming your backend returns { shortId: "abc123" }
-      setShortUrl(`http://localhost:8000/${result.id}`);
+      setShortUrl(`https://shortly-backend-amcp.onrender.com/url/${result.id}`);
     } catch (err) {
       console.error("Error:", err);
     } finally {
