@@ -155,7 +155,7 @@ export default function AnalyticsPage() {
     setErr("");
     setLoading(true);
     try {
-      const res = await fetch("http://localhost:8000/analytics", {
+      const res = await fetch("https://shortly-backend-amcp.onrender.com/analytics", {
         method: "GET",
         credentials: "include",
       });

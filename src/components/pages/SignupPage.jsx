@@ -15,12 +15,15 @@ function SignupPage() {
 
     // Example API call
     try {
-      const response = await fetch("http://localhost:8000/signup", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        credentials: "include",
-        body: JSON.stringify(data),
-      });
+      const response = await fetch(
+        "https://shortly-backend-amcp.onrender.com/signup",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          credentials: "include",
+          body: JSON.stringify(data),
+        }
+      );
 
       const result = await response.json();
       console.log("Server Response:", result);
@@ -124,14 +127,19 @@ function SignupPage() {
             <button
               type="submit"
               className="w-full bg-indigo-600 hover:bg-indigo-700 transition-colors text-white font-medium py-2 px-4 rounded-lg mt-4"
-            > 
+            >
               Submit
             </button>
           </form>
           <div className="text-white flex items-center mt-3 justify-center">
             <p className="mr-6">Alrealdy have account?</p>
-            <Link to="/login" className="bg-gray-800 h-10 w-28 flex items-center justify-center rounded-2xl hover:bg-teal-200 hover:text-black transition delay-75
-            ">Login</Link>
+            <Link
+              to="/login"
+              className="bg-gray-800 h-10 w-28 flex items-center justify-center rounded-2xl hover:bg-teal-200 hover:text-black transition delay-75
+            "
+            >
+              Login
+            </Link>
           </div>
         </div>
       </div>

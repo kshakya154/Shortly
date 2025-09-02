@@ -16,7 +16,7 @@ function UrlPage() {
   const onSubmit = async (data) => {
     setLoading(true);
     try {
-      const res = await fetch("http://localhost:8000/url", {
+      const res = await fetch("https://shortly-backend-amcp.onrender.com/url", {
         method: "POST",
         credentials: "include",
         headers: {
