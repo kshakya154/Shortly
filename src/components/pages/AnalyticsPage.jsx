@@ -39,7 +39,7 @@ function AnalyticsCard({ item, i }) {
   const redirect = item?.redirectedUrl ?? item?.destination ?? "#";
 
   const shortUrl = useMemo(
-    () => `http://localhost:8000/${shortId}`,
+    () => `https://shortly-backend-amcp.onrender.com/${shortId}`,
     [shortId]
   );
 
