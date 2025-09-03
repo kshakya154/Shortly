@@ -17,7 +17,7 @@ function LoginPage() {
   const onSubmit = async (data) => {
     try {
       const response = await fetch(
-        "https://shortly-backend-amcp.onrender.com/login",
+        "https://shortly-backend-amcp.onrender.com/auth/login",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },

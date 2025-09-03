@@ -16,7 +16,7 @@ function SignupPage() {
     // Example API call
     try {
       const response = await fetch(
-        "https://shortly-backend-amcp.onrender.com/signup",
+        "https://shortly-backend-amcp.onrender.com/auth/signup",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
