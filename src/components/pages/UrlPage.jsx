@@ -16,20 +16,23 @@ function UrlPage() {
   const onSubmit = async (data) => {
     setLoading(true);
     try {
-      const res = await fetch("https://shortly-backend-amcp.onrender.com/api/url", {
-        method: "POST",
-        credentials: "include",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data), // { url: "..." }
-      });
+      const res = await fetch(
+        "https://shortly-backend-amcp.onrender.com/api/url",
+        {
+          method: "POST",
+          credentials: "include",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(data), // { url: "..." }
+        }
+      );
 
       const result = await res.json();
       console.log("Server Response:", result);
 
       // Assuming your backend returns { shortId: "abc123" }
-      setShortUrl(`https://shortly-backend-amcp.onrender.com/url/${result.id}`);
+      setShortUrl(`https://shortly-backend-amcp.onrender.com/${result.id}`);
     } catch (err) {
       console.error("Error:", err);
     } finally {
