@@ -5,10 +5,13 @@ function LogoutButton() {
 
   const handleLogout = async () => {
     try {
-      const response = await fetch("/auth/logout", {
-        method: "POST",
-        credentials: "include", // important to send cookies
-      });
+      const response = await fetch(
+        "https://shortly-backend-amcp.onrender.com/auth/logout",
+        {
+          method: "POST",
+          credentials: "include", // important to send cookies
+        }
+      );
 
       if (response.ok) {
         navigate("/login"); // redirect to login page
