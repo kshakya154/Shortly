@@ -7,7 +7,7 @@ function Header() {
 
   const handleLogout = async () => {
     try {
-      const res = await fetch("https://shortly-backend-amcp.onrender.com/logout", {
+      const res = await fetch("https://shortly-backend-amcp.onrender.com/auth/logout", {
         method: "POST",
         credentials: "include",
       });
