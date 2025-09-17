@@ -3,20 +3,16 @@ const Example = () => {
   return (
     <div>
       <CutoutTextLoader
-        height="450px"
+        height="1280px"
         background="white"
         // NOTE: Using GIFs for the background looks super cool :)
-        imgUrl="/bg.jpeg"
+        imgUrl="/bg.jpg"
       />
     </div>
   );
 };
 
-const CutoutTextLoader = ({
-  height,
-  background,
-  imgUrl,
-}) => {
+const CutoutTextLoader = ({ height, background, imgUrl }) => {
   return (
     <div className="relative" style={{ height }}>
       <div
